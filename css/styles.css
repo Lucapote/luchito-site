@@ -23,7 +23,7 @@ html{
     align-items: center;
 }
 
-/* Efectos */
+/* ----------------------Efectos---------------------- */
 
 .boxShadow{
     box-shadow: var(--boxShadowSettings);
@@ -52,11 +52,12 @@ html{
     text-align: center;
 }
 
-/* AboutMe */
+/* ----------------------AboutMe---------------------- */
 
 .layout__aboutMe,
 .layout__galleries{
-    width: var(--max-width);
+    max-width: var(--max-width);
+    width: 100%;
 }
 
 .layout__aboutMe{
@@ -81,7 +82,7 @@ html{
     font-size: 24px;
 
     width: 55%;
-    height: 538px;
+    height: 98%;
     padding: 48px 64px;
 }
 
@@ -102,13 +103,13 @@ html{
 
 .slide-from-left {
     opacity: 0;
-    transform: translateX(-100%);
+    transform: translateX(-50vw);
     transition: all 1s ease-in-out;
 }
 
 .slide-from-right {
     opacity: 0;
-    transform: translateX(100%);
+    transform: translateX(50vw);
     transition: all 1s ease-in-out;
 }
 
@@ -142,8 +143,8 @@ html{
 .bio__imagenContainer,
 .estudios__imagenContainer,
 .logros__imagenContainer{
-    width: 624px;
-    height: 549px;
+    width: 51.7%;
+    height: 100%;
     overflow: hidden;
 }
 
@@ -160,7 +161,7 @@ html{
     object-fit: cover;
 }
 
-/* Galerias */
+/* ----------------------Galerias---------------------- */
 
 .layout__galleries{
     margin-top: 263px;
@@ -230,7 +231,7 @@ html{
     height: 480px;
 }
 
-/* Agenda */
+/* ----------------------Agenda---------------------- */
 
 .layout__agenda{
     display: flex;
@@ -335,7 +336,7 @@ html{
     background-color: var(--blanco);
 }
 
-/* Contacto */
+/* ----------------------Contacto---------------------- */
 
 .layout__contacto{
     margin-top: 100px;
@@ -410,4 +411,35 @@ html{
 .redes__instagram,
 .redes__youtube{
     text-decoration: underline;
+}
+
+/* ----------------------MediaQueries---------------------- */
+
+@media (max-width: 1439px) {
+    .layout{
+        padding: 0 40px;
+    }
+
+    .layout__aboutMe{
+        gap: 40px;
+    }
+
+    .bio__article,
+    .estudios__article,
+    .logros__article{
+        font-size: 20px;
+        height: 70%;
+    }
+
+    .bio__imagen,
+    .estudios__imagen,
+    .logros__imagen{
+        transform: translateY(-100px);
+    }
+
+    .bio__article,
+    .logros__article,
+    .estudios__article{
+        bottom: 70px;
+    }
 }

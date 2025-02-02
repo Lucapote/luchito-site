@@ -1,7 +1,7 @@
 // Configuración del Intersection Observer
 const observerOptions = {
     root: null, // usar el viewport como contenedor
-    threshold: 0.1, // cuando al menos 10% del elemento es visible
+    threshold: 0.2, // cuando al menos 20% del elemento es visible
     rootMargin: '0px'
 };
 
