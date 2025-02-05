@@ -160,6 +160,7 @@ html{
 
 .nav__crossLinea{
     background-color: var(--blanco);
+    border-radius: 3px;
     width: 30px;
     height: 4px;
 }
@@ -880,6 +881,7 @@ html{
         display: flex;
 
         padding: 16px;
+        padding-right: 24px;
         height: 56px;
 
         position: fixed;

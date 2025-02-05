@@ -68,8 +68,6 @@ const aside = document.querySelector(".layout__asideNav");
 let cruz = false;
 let visible = "aside__visible"
 
-
-
 let esconder = ()=>{
     
     if(!cruz){
@@ -100,3 +98,14 @@ let esconder = ()=>{
 }
 
 boton.addEventListener("click", esconder);
+
+addEventListener("scroll", ()=>{
+    lineas.forEach((linea, index)=>{
+        
+        let mostrar = `clicked${index+1}`;
+
+        linea.classList.remove(mostrar)
+    })
+
+    aside.classList.remove(visible)
+})
