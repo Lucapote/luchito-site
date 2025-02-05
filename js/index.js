@@ -24,7 +24,13 @@ const bio = document.querySelector('.aboutMe__bio');
 const estudios = document.querySelector('.aboutMe__estudios');
 const logros = document.querySelector('.aboutMe__logros');
 
+const galerias = document.querySelector(".layout__galleries");
+const agenda = document.querySelector(".layout__agenda");
+
 // Agregar las clases iniciales y comenzar a observar
+
+// -------------------- Desde el costado --------------------
+
 if (bio) {
     bio.classList.add('slide-from-left');
     observer.observe(bio);
@@ -38,4 +44,16 @@ if (estudios) {
 if (logros) {
     logros.classList.add('slide-from-left');
     observer.observe(logros);
+}
+
+// -------------------- Desde abajo --------------------
+
+if(galerias){
+    galerias.classList.add("slide-from-bottom");
+    observer.observe(galerias);
+}
+
+if(agenda){
+    agenda.classList.add("slide-from-bottom");
+    observer.observe(agenda);
 }

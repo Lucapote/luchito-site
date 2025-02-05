@@ -12,6 +12,29 @@
     <title>Lucio Clivio</title>
 </head>
 <body>
+
+    <nav class="layout__nav">
+
+        <!-- <div class="nav__crossContainer">
+            <div class="nav__crossLinea nav__crossLinea--1"></div>
+            <div class="nav__crossLinea nav__crossLinea--2"></div>
+        </div> -->
+
+        <ul class="nav__menu">
+            <li class="nav__item">
+                <a href="#sobreMi" class="nav__link">Sobre Mi</a>
+            </li>
+            <li class="nav__item">
+                <a href="#galerias" class="nav__link">Galerias</a>
+            </li>
+            <li class="nav__item">
+                <a href="#agenda" class="nav__link">Agenda</a>
+            </li>
+            <li class="nav__item">
+                <a href="#contacto" class="nav__link">Contacto</a>
+            </li>
+        </ul>
+    </nav>
     
     <header class="layout__banner">
         <div class="banner__textContainer">
@@ -22,7 +45,7 @@
     
     <main class="layout">
 
-        <section class="layout__aboutMe">
+        <section id="sobreMi" class="layout__aboutMe">
             <div class="aboutMe__bio">
                 <article class="bio__article boxShadow">
                     <div class="bio__textContainer">
@@ -52,7 +75,7 @@
             <div class="aboutMe__logros">
                 <article class="logros__article boxShadow">
                     <div class="logros__textContainer">
-                        <h3 class="logros__title">Estudios</h3>
+                        <h3 class="logros__title">Logros</h3>
                         <p class="logros__description">Corem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu turpis molestie, dictum est a, mattis tellus. Sed dignissim, metus nec fringilla accumsan, risus sem sollicitudin lacus, ut interdum tellus elit sed risus.</p>
                     </div>
                 </article>
@@ -63,11 +86,16 @@
             </div>
         </section>
 
-        <section class="layout__galleries">
+        <section id="galerias" class="layout__galleries">
             <h3 class="galleries__title">Galerias</h3>
 
             <div class="galleries__container">
+
                 <div class="galleries__percu boxShadow">
+                    <picture class="percu__imgContainer">
+                        <img src="img/marimbas.jpg" alt="marimbas" class="percu__img">
+                    </picture>
+
                     <div class="percu__textContainer">
                         <h4 class="percu__title">Percusion</h4>
                         <p class="percu__text">Galeria | Media</p>
@@ -75,16 +103,21 @@
                 </div>
     
                 <div class="galleries__direccion boxShadow">
+                    <picture class="direccion__imgContainer">
+                        <img src="img/manos.jpg" alt="manos" class="direccion__img">
+                    </picture>
+
                     <div class="direccion__textContainer">
                         <h4 class="direccion__title">Direccion</h4>
                         <p class="direccion__text">Galeria | Media</p>
                     </div>
                 </div>
+
             </div>
             
         </section>
 
-        <section class="layout__agenda">
+        <section id="agenda" class="layout__agenda">
             <h3 class="agenda__title">Agenda</h3>
 
             <div class="agenda__fechasContainer">
@@ -118,7 +151,7 @@
             </div>
         </section>
 
-        <section class="layout__contacto">
+        <section id="contacto" class="layout__contacto">
             <h3 class="contacto__title">Contacto</h3>
 
             <div class="contacto__container">
