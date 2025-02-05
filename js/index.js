@@ -57,3 +57,46 @@ if(agenda){
     agenda.classList.add("slide-from-bottom");
     observer.observe(agenda);
 }
+
+// Menu Desplegable
+
+
+const boton = document.querySelector(".nav__crossContainer");
+const lineas = document.querySelectorAll(".nav__crossLinea");
+const aside = document.querySelector(".layout__asideNav");
+
+let cruz = false;
+let visible = "aside__visible"
+
+
+
+let esconder = ()=>{
+    
+    if(!cruz){
+        cruz = true
+
+        lineas.forEach((linea, index)=>{
+        
+            let mostrar = `clicked${index+1}`;
+    
+            linea.classList.add(mostrar)  
+        })
+
+        aside.classList.add(visible);
+    }else{
+        cruz=false;
+
+        lineas.forEach((linea, index)=>{
+
+            let mostrar = `clicked${index+1}`;
+
+            linea.classList.remove(mostrar)
+
+        })
+
+        aside.classList.remove(visible)
+    }
+    
+}
+
+boton.addEventListener("click", esconder);

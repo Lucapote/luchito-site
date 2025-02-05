@@ -62,7 +62,55 @@ html{
     scroll-margin-top: 100px;
 }
 
+
+/* ----------------------Aside---------------------- */
+.layout__asideNav{
+    font-size: 16px;
+    background-color: var(--piel);
+    height: 100%;
+    max-width: 280px;
+    width: 60%;
+    
+    position: fixed;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: 11;
+    
+    opacity: 0;
+    visibility: hidden;
+    transform: translateX(280px);
+    
+    transition: all 300ms ease-in-out;
+}
+
+.aside__visible{
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(0);
+}
+
+.asideNav__menu{
+    position: absolute;
+    top: 28px;
+    right: 30%;
+
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+
+    padding: 24px;
+    text-align: center;
+}
+
+
 /* ----------------------navbar---------------------- */
+.nav__name{
+    display: none;
+    font-size: 16px;
+    font-weight: bold;
+}
+
 .layout__nav{
     display: flex;
     justify-content: center;
@@ -84,38 +132,45 @@ html{
     gap: 74px;
 }
 
-/* .nav__crossContainer{
+.nav__crossContainer{
     display: none;
     flex-direction: column;
-    gap: 17px;
-    justify-content: center;
+    
+    justify-content: space-between;
 }
 
 .nav__crossLinea--1,
-.nav__crossLinea--2{
+.nav__crossLinea--2,
+.nav__crossLinea--3{
     transition: all 300ms ease-in-out;
     transform-origin: left;
 }
 
-.nav__crossContainer:hover .nav__crossLinea--1{
-    transform: rotate(45deg);
+.clicked1{
+    transform: rotate(42deg);
 }
 
-.nav__crossContainer:hover .nav__crossLinea--2{
-    transform: rotate(-45deg);
+.clicked2{
+    opacity: 0;
+}
+
+.clicked3{
+    transform: rotate(-42deg);
 }
 
 .nav__crossLinea{
     background-color: var(--blanco);
     width: 30px;
     height: 4px;
-} */
+}
 
-.nav__link{
+.nav__link,
+.asideNav__link{
     position: relative;
 }
 
-.nav__link::before{
+.nav__link::before,
+.asideNav__link::before{
     content: "";
 
     background-color: var(--negro);
@@ -131,7 +186,8 @@ html{
     transition: all 100ms linear;
 }
 
-.nav__link:hover::before{
+.nav__link:hover::before,
+.asideNav__link:hover::before{
     width: 100%;
     opacity: 1;
 }
@@ -804,6 +860,31 @@ html{
     .agenda__title,
     .contacto__title{
         font-size: 20px;
+    }
+    
+    /* ------------- NavBar --------------- */
+    .layout__nav{
+        justify-content: space-between;
+        padding: 16px 24px;
+    }
+
+    .nav__menu{
+        display: none;
+    }
+
+    .nav__name{
+        display: block;
+    }
+
+    .nav__crossContainer{
+        display: flex;
+
+        padding: 16px;
+        height: 56px;
+
+        position: fixed;
+        right: 0;
+        z-index: 20;
     }
 
     /* ------------- Banner --------------- */
